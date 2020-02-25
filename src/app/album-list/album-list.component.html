@@ -1,6 +1,8 @@
 <div class="app-header">
-    <div class="container row">
-        <a class="app-title col-grow" routerLink="/">Album list</a>
+    <div class="container row" style="width: 100%">
+        <div class="col-grow">
+            <a class="app-title" routerLink="/">Album list</a>
+        </div>
         <input type="text" class="app-search-box" placeholder="Search" [formControl]="searchControl"
             (keyup.enter)="onEnter()">
     </div>

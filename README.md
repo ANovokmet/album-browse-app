@@ -2,6 +2,8 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.4.
 
+Install Angular and run `npm start`. This starts both the app and the server.
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
@@ -29,5 +31,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ## Log
 
 21.2. 15:30 - Generated project.
+
 21.2. 16:00 - Added npm scripts.
+
 24.2. 18:10-18:40 - Development.

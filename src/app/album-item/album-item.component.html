@@ -1,20 +1,20 @@
-<div class="album-item row">
+<div class="album-item row col-grow">
     <img class="album-img" [src]="value.imageUrl">
-    <div class="col col-grow text-ellipsis">
-        <div class="lead">{{value.title}}</div>
+    <div class="col col-grow overflow-hidden">
+        <div class="lead text-ellipsis">{{value.title}}</div>
         <a class="caption" routerLink="/artist/{{value.artist.id}}">{{value.artist.title}}</a>
     </div>
     <div class="col col-2">
-        <span class="label">Released:</span>
-        {{value.releaseDate | date:'yyyy' }}
+        <span class="body">Released:</span>
+        <span class="label">{{value.releaseDate | date:'yyyy' }}</span>
     </div>
-    <div class="col col-2">
+    <div class="col col-2 label">
         {{value.price}}
     </div>
     <div class="col col-2 centered">
-        <button *ngIf="!value.favorite" class="btn-favorite" (click)="addedFavorite.next(value)">MARK AS
+        <button *ngIf="!value.favorite" class="btn btn-favorite" (click)="addedFavorite.next(value)">MARK AS
             FAVORITE</button>
-        <button *ngIf="value.favorite" class="btn-remove-favorite" (click)="removedFavorite.next(value)">Remove
+        <button *ngIf="value.favorite" class="btn btn-remove-favorite" (click)="removedFavorite.next(value)">Remove
             favorite</button>
     </div>
 </div>

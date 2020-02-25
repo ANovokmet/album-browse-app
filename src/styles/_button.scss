@@ -1,31 +1,36 @@
-// .btn {
-//     display: inline-block;
-//     font-family: $btn-font-family;
-//     font-weight: $btn-font-weight;
-//     line-height: $btn-line-height;
-//     color: $btn-color;
-//     text-align: center;
-//     vertical-align: middle;
-//     cursor: pointer;
-//     background-color: transparent;
-//     border: 1px solid transparent;
+@import 'variables';
 
-//     transition: color .15s ease-in-out,
-//         background-color .15s ease-in-out,
-//         border-color .15s ease-in-out,
-//         box-shadow .15s ease-in-out;
+.btn {
+    display: inline-block;
+    color: $white;
+    text-align: center;
+    font-weight: bold;
+    vertical-align: middle;
+    cursor: pointer;
+    background-color: $aqua;
+    border: none;
 
-//     &:hover {
-//         color: $btn-color;
-//     }
+    border-radius: 3px;
+    font-size: 10px;
+    padding: 7px 14px;
 
-//     &:focus {
-//         box-shadow: $btn-focus-box-shadow;
-//     }
+    transition: color .15s ease-in-out,
+        background-color .15s ease-in-out,
+        border-color .15s ease-in-out,
+        box-shadow .15s ease-in-out;
 
-//     &:active {
-//         @include box-shadow($btn-active-box-shadow);
-//     }
+    &:hover {
+        background-color: darken($aqua, 5%);
+        //color: $btn-color;
+    }
 
-//     &:disabled {}
-// }
+    &:focus {
+        //box-shadow: $btn-focus-box-shadow;
+    }
+
+    &:active {
+        //@include box-shadow($btn-active-box-shadow);
+    }
+
+    &:disabled {}
+}

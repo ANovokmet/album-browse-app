@@ -1,12 +1,13 @@
 import { Injectable } from '@angular/core';
 import { Store } from '@ngrx/store';
-import { map, catchError } from 'rxjs/operators';
+import { map, catchError, filter } from 'rxjs/operators';
 import { of } from 'rxjs';
 
 import { Album } from './core/models/album';
-import { updateSuccess, updateFailure } from './store/album/album.actions';
+import { updateSuccess, updateFailure, loadAlbums, updateSearch } from './store/album/album.actions';
 import { AlbumService } from './core/api/album.service';
 import { State } from './store';
+import { ActivatedRoute } from '@angular/router';
 
 @Injectable({
     providedIn: 'root'
@@ -15,8 +16,17 @@ export class AppService {
 
     constructor(
         private store$: Store<State>,
-        private albumService: AlbumService
-    ) { }
+        private albumService: AlbumService,
+        private route: ActivatedRoute
+    ) {
+        this.route.queryParams.pipe(
+            map(params => params['q']),
+            filter(query => !!query),
+            map(query => updateSearch({ query }))
+        ).subscribe(action => {
+            this.store$.dispatch(action);
+        });
+    }
 
     addFavorite(album: Album) {
         this.albumService.update(album.id, { favorite: true }).pipe(

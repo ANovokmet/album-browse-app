@@ -69,7 +69,7 @@
       "imageUrl": "https://is5-ssl.mzstatic.com/image/thumb/Music123/v4/56/33/14/56331415-1036-71f5-a4ec-ec4e1065f69b/19UMGIM88564.rgb.jpg/170x170bb.png",
       "releaseDate": "2019-11-15T00:00:00-07:00",
       "artistId": 3,
-      "favorite": true
+      "favorite": false
     },
     {
       "id": 4,
@@ -96,7 +96,7 @@
       "imageUrl": "https://is3-ssl.mzstatic.com/image/thumb/Music118/v4/0b/c3/63/0bc363c3-c0a2-7526-ac4a-82de7483ba64/00843930033133.rgb.jpg/170x170bb.png",
       "releaseDate": "2017-11-10T00:00:00-07:00",
       "artistId": 0,
-      "favorite": true
+      "favorite": false
     },
     {
       "id": 7,

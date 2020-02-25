@@ -1,17 +1,12 @@
-.btn-favorite {
-    width: 125px;
-    height: 25px;
-    border-radius: 3px;
-    background-color: var(--aqua);
-
-    font-size: 10px;
-    color: var(--white);
-}
+@import 'variables';
 
 .btn-remove-favorite {
-    font-size: 10px;
-    color: var(--aqua);
+    color: $aqua;
     background-color: transparent;
+}
+
+.overflow-hidden {
+    overflow: hidden;
 }
 
 .album-img {
@@ -26,7 +21,7 @@
     box-shadow: 0 1px 3px 0 #e7e7e7;
     padding: 18px;
     margin-bottom: 10px;
-    width: 100%;
+    min-width: 0;
 }
 
 
@@ -35,16 +30,16 @@
     font-size: 18px;
     font-weight: 500;
     line-height: 1.33;
-    color: var(--blackish);
+    color: $blackish;
 }
 
 .label {
-    margin-right: 8px;
     font-size: 14px;
     color: #000000;
 }
 
 .body {
+    margin-right: 8px;
     font-size: 14px;
     color: #a0a0a0;
 }
