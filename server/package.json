@@ -1,0 +1,13 @@
+{
+  "name": "bf-js-dev-test",
+  "private": true,
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "json-server": "^0.15.1"
+  },
+  "scripts": {
+    "start": "json-server --watch db-music.json --port 3004"
+  }
+}

@@ -1,0 +1,31 @@
+// .btn {
+//     display: inline-block;
+//     font-family: $btn-font-family;
+//     font-weight: $btn-font-weight;
+//     line-height: $btn-line-height;
+//     color: $btn-color;
+//     text-align: center;
+//     vertical-align: middle;
+//     cursor: pointer;
+//     background-color: transparent;
+//     border: 1px solid transparent;
+
+//     transition: color .15s ease-in-out,
+//         background-color .15s ease-in-out,
+//         border-color .15s ease-in-out,
+//         box-shadow .15s ease-in-out;
+
+//     &:hover {
+//         color: $btn-color;
+//     }
+
+//     &:focus {
+//         box-shadow: $btn-focus-box-shadow;
+//     }
+
+//     &:active {
+//         @include box-shadow($btn-active-box-shadow);
+//     }
+
+//     &:disabled {}
+// }

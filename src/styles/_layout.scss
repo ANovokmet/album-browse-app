@@ -1,0 +1,23 @@
+.container {
+    margin: 0 auto;
+    max-width: 800px;
+    width: 100%;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.col-grow {
+    flex-grow: 1;
+}
+
+.col-2 {
+    flex: 0 0 (100% / 6);
+}
+
+.col-1 {
+    flex: 0 0 (100% / 12);
+}

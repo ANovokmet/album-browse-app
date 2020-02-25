@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "bornfight-app": {
+    "album-browse-app": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/bornfight-app",
+            "outputPath": "dist/album-browse-app",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -27,8 +27,11 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
-            ],
+              "src/styles/main.scss"
+			],
+			"stylePreprocessorOptions": {
+				"includePaths": ["src/styles"]
+			},
             "scripts": []
           },
           "configurations": {
@@ -61,18 +64,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "bornfight-app:build"
+            "browserTarget": "album-browse-app:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "bornfight-app:build:production"
+              "browserTarget": "album-browse-app:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "bornfight-app:build"
+            "browserTarget": "album-browse-app:build"
           }
         },
         "test": {
@@ -106,7 +109,7 @@
         }
       }
     },
-    "bornfight-app-e2e": {
+    "album-browse-app-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "prefix": "",
@@ -115,11 +118,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "bornfight-app:serve"
+            "devServerTarget": "album-browse-app:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "bornfight-app:serve:production"
+              "devServerTarget": "album-browse-app:serve:production"
             }
           }
         },
@@ -135,5 +138,5 @@
       }
     }
   },
-  "defaultProject": "bornfight-app"
+  "defaultProject": "album-browse-app"
 }

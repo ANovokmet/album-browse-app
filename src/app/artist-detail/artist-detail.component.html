@@ -1,0 +1,12 @@
+<div class="app-header">
+    <div class="container row">
+        <div class="app-title col-grow">{{(artist$ | async)?.title}}</div>
+    </div>
+</div>
+<div class="app-content container">
+    <div class="album-list">
+        <app-album-item *ngFor="let album of albums$ | async; trackBy:trackByFn" class="album-item row" [value]="album"
+            (addedFavorite)="onAddFavorite($event)" (removedFavorite)="onRemoveFavorite($event)">
+        </app-album-item>
+    </div>
+</div>
